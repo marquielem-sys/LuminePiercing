@@ -119,7 +119,7 @@ nav ul li a:hover {
 
 .btn-whatsapp {
   display: inline-block;
-  background-color: #25d366;
+  background-color: rgba(233, 13, 123, 0.95); /* Cor anterior #25d366 */
   color: white;
   padding: 12px 25px;
   border-radius: 8px;
@@ -205,6 +205,35 @@ footer {
 }
 
 
+#redes {
+  padding: 60px 20px;
+  text-align: center;
+  max-width: 900px;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 40px;
+}
+
+.redes-sociais h2 {
+  margin-bottom: 15px;
+  color: #b8860b;
+}
+
+.studio-lumine {
+  font-family: 'Italianno', cursive;
+  font-size: 4em; /* Letras bem maiores */
+  color: #DDA2A8;
+}
+
+.piercing {
+  font-family: 'Red Hat Display' black 900, sans-serif; 
+  text-transform: uppercase; /* Letras Maiuscula */
+  color: #DDA2A8;
+  font-size: 2em;
+}
+
 @font-face {
   font-family: "Italianno";
   src: url("fonts/Italianno.ttf") format("truetype");
@@ -213,16 +242,6 @@ footer {
   
 }
 
-.studio-lumine {
-  font-family: 'Italianno', cursive;
-  font-size: 3em; /* Letras bem maiores */
-  color: #DDA2A8;
-}
 
-.piercing {
-  font-family: 'Red Hat Display', sans-serif, negrito; 
-  text-transform: uppercase; /* Letras Maiuscula */
-  color: #DDA2A8;
-}
 
 
