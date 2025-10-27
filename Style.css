@@ -12,7 +12,7 @@ body {
 }
 
 .bg-blur {
-  background: url("./images/fundo2.jpeg") center/cover no-repeat;
+  background: url("./img/fundo2.jpeg") center/cover no-repeat;
   position: absolute;
   top: 0;
   left: 0;
