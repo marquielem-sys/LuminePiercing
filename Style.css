@@ -42,8 +42,8 @@ header {
 }
 
 .logo-img {
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   object-fit: cover;
 }
@@ -57,7 +57,6 @@ nav ul {
   display: flex;
   gap: 25px;
   list-style: none;
-  
 }
 
 nav ul li a {
@@ -204,7 +203,6 @@ footer {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-
 #redes {
   padding: 60px 20px;
   text-align: center;
@@ -222,15 +220,15 @@ footer {
 }
 
 .studio-lumine {
-  font-family: 'Italianno', cursive;
+  font-family: "Italianno", cursive;
   font-size: 4em; /* Letras bem maiores */
-  color: #DDA2A8;
+  color: #dda2a8;
 }
 
 .piercing {
-  font-family: 'Red Hat Display' black 900, sans-serif; 
+  font-family: "Red Hat Display", sans-serif;
   text-transform: uppercase; /* Letras Maiuscula */
-  color: #DDA2A8;
+  color: #dda2a8;
   font-size: 2em;
 }
 
@@ -239,9 +237,61 @@ footer {
   src: url("fonts/Italianno.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
-  
 }
 
+/* Manu Hamburguer */
 
-
-
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 5px;
+}
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  margin: 3px 0;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+.hamburger.active span:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    flex-direction: column;
+    background: #ff6b6b;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    padding: 2rem 0;
+  }
+  .nav-menu.active {
+    left: 0;
+  }
+  .nav-menu li {
+    margin: 1rem 0;
+  }
+  .nav-menu li a {
+    font-size: 1.1rem;
+    display: block;
+    padding: 1rem;
+  }
+}
+.main-content {
+  margin-top: 80px;
+}
