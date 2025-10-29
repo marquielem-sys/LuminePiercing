@@ -241,7 +241,7 @@ footer {
 
 /* ===== MENU HAMBURGUER AJUSTADO ===== */
 .nav-container {
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -274,6 +274,9 @@ footer {
   display: none;
   flex-direction: column;
   cursor: pointer;
+  margin-left: auto;
+  padding: 8px;
+  transition: transform 0.2s ease;
 }
 
 .hamburger span {
@@ -283,6 +286,10 @@ footer {
   margin: 4px 0;
   border-radius: 2px;
   transition: 0.3s;
+}
+
+.hamburger:hover {
+  transform: scale(1.1);
 }
 
 /* Animação do ícone */
@@ -307,15 +314,18 @@ footer {
     left: -100%;
     top: 75px;
     flex-direction: column;
-    background: rgba(233, 13, 123, 0.97);
+    background: rgba(233, 13, 123, 0.85);
     width: 100%;
     text-align: center;
     transition: 0.3s ease;
     padding: 2rem 0;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+
   }
 
   .nav-menu.active {
+    animation: slideIn 0.4s ease forwards;
     left: 0;
   }
 
@@ -326,6 +336,20 @@ footer {
   .nav-menu li a {
     font-size: 1.2rem;
     display: block;
+    font-size: 1.3rem;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 0.5px;
   }
 }
 
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
