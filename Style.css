@@ -23,7 +23,7 @@ body {
 }
 
 header {
-  background: rgba(233, 13, 123, 0.95);
+  background: transparent; /* Cor anterior rgba(233, 13, 123, 0.95) */
   position: fixed;
   top: 0;
   width: 100%;
@@ -57,7 +57,6 @@ nav ul {
   display: flex;
   gap: 25px;
   list-style: none;
-  
 }
 
 nav ul li a {
@@ -204,7 +203,6 @@ footer {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-
 #redes {
   padding: 60px 20px;
   text-align: center;
@@ -222,15 +220,15 @@ footer {
 }
 
 .studio-lumine {
-  font-family: 'Italianno', cursive;
+  font-family: "Italianno", cursive;
   font-size: 4em; /* Letras bem maiores */
-  color: #DDA2A8;
+  color: #dda2a8;
 }
 
 .piercing {
-  font-family: 'Red Hat Display', sans-serif; 
+  font-family: "Red Hat Display", sans-serif;
   text-transform: uppercase; /* Letras Maiuscula */
-  color: #DDA2A8;
+  color: #dda2a8;
   font-size: 2em;
 }
 
@@ -239,9 +237,95 @@ footer {
   src: url("fonts/Italianno.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
-  
 }
 
+/* ===== MENU HAMBURGUER AJUSTADO ===== */
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  background: rgba(233, 13, 123, 0.95);
+}
 
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
 
+.nav-menu li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s, color 0.3s;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+.nav-menu li a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Ícone do menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 28px;
+  height: 3px;
+  background: white;
+  margin: 4px 0;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* Animação do ícone */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(-45deg) translate(-6px, 6px);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(45deg) translate(-6px, -6px);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 75px;
+    flex-direction: column;
+    background: rgba(233, 13, 123, 0.97);
+    width: 100%;
+    text-align: center;
+    transition: 0.3s ease;
+    padding: 2rem 0;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .nav-menu li {
+    margin: 1rem 0;
+  }
+
+  .nav-menu li a {
+    font-size: 1.2rem;
+    display: block;
+  }
+}
 
