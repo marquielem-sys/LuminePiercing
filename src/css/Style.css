@@ -38,7 +38,11 @@ body {
 }
 
 .btn-mobile {
+  position: absolute;
+  top: 20px;
+  right: 20px;
   font-size: 1.5rem;
+  cursor: pointer;
 }
 
 .conteudo {
@@ -241,3 +245,4 @@ body {
   font-weight: normal;
   font-style: normal;
 }
+
