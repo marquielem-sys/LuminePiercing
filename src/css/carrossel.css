@@ -1,0 +1,24 @@
+/* CARROCSSEL DE IMAGEM*/
+
+.carrossel-container {
+  margin-top: 90px;
+  width: 100%;
+  overflow: hidden;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.carrossel {
+  display: flex;
+  width: 300%;
+  transition: transform 1s ease;
+}
+
+.carrossel img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}

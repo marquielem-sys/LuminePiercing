@@ -1,0 +1,243 @@
+@import url("../css/carrossel.css");
+@import url("../css/footer.css");
+@import url("../css/hearder.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  color: #333;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.bg-blur {
+  background: url("./img/fundo2.jpeg") center/cover no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: blur(3px) brightness(0.95);
+  z-index: -1;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+
+.btn-mobile {
+  font-size: 1.5rem;
+}
+
+.conteudo {
+  padding: 60px 20px;
+  text-align: center;
+  max-width: 900px;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 40px;
+}
+
+.conteudo h2 {
+  margin-bottom: 15px;
+  color: #b8860b;
+}
+
+.conteudo ul {
+  list-style: disc;
+  text-align: left;
+  margin: 20px auto;
+  max-width: 600px;
+}
+
+.btn-whatsapp {
+  display: inline-block;
+  background-color: rgba(233, 13, 123, 0.95); /* Cor anterior #25d366 */
+  color: white;
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+.btn-whatsapp:hover {
+  background-color: #1ebe57;
+}
+
+/* Animações suaves */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Ícones das redes sociais (corrigido) */
+.social-buttons .btn {
+  display: inline-block;
+  margin: 5px;
+  padding: 12px 25px;
+  font-size: 18px;
+  border-radius: 30px;
+  color: #fff;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.whatsapp {
+  background: #25d366;
+}
+.instagram {
+  background: #e1306c;
+}
+.facebook {
+  background: #1877f3;
+}
+
+.social-buttons .btn:hover {
+  opacity: 0.8;
+}
+
+.whatsapp-float {
+  position: fixed;
+  width: 55px;
+  height: 55px;
+  bottom: 25px;
+  right: 25px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 28px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  transition: 0.3s;
+}
+
+.whatsapp-float i {
+  line-height: 55px;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+/* ===== MENU HAMBURGUER AJUSTADO ===== */
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 30px;
+  background: rgba(233, 13, 123, 0.95);
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav-menu li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s, color 0.3s;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+.nav-menu li a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Ícone do menu */
+.btn-mobile {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.btn-mobile span {
+  width: 28px;
+  height: 3px;
+  background: white;
+  margin: 4px 0;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* Animação do ícone */
+.btn-mobile.active span:nth-child(1) {
+  transform: rotate(-45deg) translate(-6px, 6px);
+}
+.btn-mobile.active span:nth-child(2) {
+  opacity: 0;
+}
+.btn-mobile.active span:nth-child(3) {
+  transform: rotate(45deg) translate(-6px, -6px);
+}
+
+/* Responsivo */
+@media (max-width: 769px) {
+  .btn-mobile {
+    display: flex;
+    
+  }
+
+  .nav-menu { /* Este seletor agora se aplica à sua UL */
+    position: fixed;
+    left: -100%;
+    top: 75px; /* Altura do header ajustada */
+    flex-direction: column;
+    background: rgba(233, 13, 123, 0.97);
+    width: 100%;
+    text-align: center;
+    transition: 0.3s ease;
+    padding: 2rem 0;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .nav-menu li {
+    margin: 1rem 0;
+  }
+
+  .nav-menu li a {
+    font-size: 1.2rem;
+    display: block;
+  }
+}
+
+@font-face {
+  font-family: "Italianno";
+  src: url("fonts/Italianno.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}

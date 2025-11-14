@@ -16,13 +16,12 @@
       href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="Style.css" />
-    <script defer src="Script.js"></script>
+    <link rel="stylesheet" href="src/css/Style.css" />
 
     <!-- Fontes e ícones atualizados -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -38,6 +37,7 @@
       referrerpolicy="no-referrer"
     />
   </head>
+
   <body>
     <div class="bg-blur"></div>
 
@@ -45,7 +45,7 @@
       <nav class="nav-container">
         <div class="logo-area">
           <img
-            src="./img/logo2.jpeg"
+            src="src/css/img/logo2.jpeg"
             alt="Studio Lumine Piercing"
             class="logo-img"
           />
@@ -55,12 +55,9 @@
           </div>
         </div>
 
-        <!-- Ícone do menu hamburguer -->
-        <div class="hamburger" id="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
+        <button class="btn btn-mobile">
+          <i class="fa-solid fa-bars"></i>
+        </button>
 
         <ul class="nav-menu" id="nav-menu">
           <li><a href="#home">Home</a></li>
@@ -75,10 +72,10 @@
     <main class="main-content">
       <section id="home" class="carrossel-container fade-in">
         <div class="carrossel">
-          <img src="./img/baby.jpeg" alt="Piercing humanizado 1" />
-          <img src="./img/kitsAdulto.jpeg" alt="Piercing humanizado 2" />
-          <img src="./img/baby2.jpeg" alt="Piercing humanizado 3" />
-          <img src="./img/kitsAdulto2.jpeg" alt="piercing humanizado 4" />
+          <img src="src/css/img/baby.jpeg" alt="Piercing humanizado 1" />
+          <img src="src/css/img/kitsAdulto.jpeg" alt="Piercing humanizado 2" />
+          <img src="src/css/img/baby2.jpeg" alt="Piercing humanizado 3" />
+          <img src="src/css/img/kitsAdulto2.jpeg" alt="piercing humanizado 4" />
         </div>
       </section>
 
@@ -150,5 +147,7 @@
     <footer>
       <p>© 2025 Studio Lumine Piercing — Todos os direitos reservados.</p>
     </footer>
+
+    <script src="src/js/Script.js"></script>
   </body>
 </html>

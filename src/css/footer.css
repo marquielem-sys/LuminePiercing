@@ -1,0 +1,38 @@
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(255, 247, 176, 0.8);
+  font-size: 0.9em;
+  color: #555;
+  margin-top: 40px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#redes {
+  padding: 60px 20px;
+  text-align: center;
+  max-width: 900px;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 40px;
+}
+
+.redes-sociais h2 {
+  margin-bottom: 15px;
+  color: #b8860b;
+}
+
+.studio-lumine {
+  font-family: "Italianno", cursive;
+  font-size: 4em; /* Letras bem maiores */
+  color: #dda2a8;
+}
+
+.piercing {
+  font-family: "Red Hat Display", sans-serif;
+  text-transform: uppercase; /* Letras Maiuscula */
+  color: #dda2a8;
+  font-size: 2em;
+}
